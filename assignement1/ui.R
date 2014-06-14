@@ -4,10 +4,22 @@ library(ggplot2)
 shinyUI(pageWithSidebar(
   headerPanel("Example plot"),
   sidebarPanel(
-    sliderInput('mu', 'Guess at the mu',value = 70, min = 60, max = 80, step = 0.05,)
+    h1("1"),h2("2"),
+    textInput(inputId="text1", label = "Input Text1"),
+    numericInput('id1','pds',0,min=0,max=9),
+    #checkboxGroupInput
+    dateInput('ds',"id2:"),
+    sliderInput('mu', 'Guess at the mu',value = 70, min = 60, max = 80, step = 0.05,),
+    submitButton('Submit')
   ),
   mainPanel(
-    plotOutput('newHist')
+    h4('You entered'),
+    verbatimTextOutput("oid1"),
+    h4('You entered'),
+    verbatimTextOutput("oid2"),
+    code('some code'),
+    p('some ordinary text'),
+    plotOutput('myHist')
   )
 ))
 
