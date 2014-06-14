@@ -3,7 +3,7 @@ title       : Assignement 2
 subtitle    : Presentation of a shiny app
 author      : JeanM
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : html5slides        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -50,4 +50,4 @@ summary(cars)
 Slide With Plot
 ========================================================
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
