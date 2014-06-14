@@ -20,10 +20,17 @@ knit        : slidify::knit2slides
 --- .class #id 
 
 ## Slide 2
+=======
+test_R_presentation
+========================================================
+author: 
+date: 
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+First Slide
+========================================================
+
+For more details on authoring R presentations click the
+**Help** button on the toolbar.
 
 ---
 
