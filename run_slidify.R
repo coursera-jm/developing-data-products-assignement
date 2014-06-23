@@ -1,0 +1,12 @@
+#install.packages("devtools")
+library(devtools)
+#install_github('slidify','ramnathv')
+#install_github('slidifyLibraries','ramnathv')
+library(slidify)
+#install_github('rCharts', 'ramnathv')
+#install_github('shiny', 'rstudio')
+
+author("JeanM")
+slidify("index.Rmd")
+browseURL("index.html")
+publish_github(user,repo)
