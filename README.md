@@ -5,4 +5,3 @@ coursera Developing Data Products by Brian Caffo, PhD, Jeff Leek, PhD, Roger D. 
 
 - Assignment 1: shiny app
 - Assignment 2: slidify
-
