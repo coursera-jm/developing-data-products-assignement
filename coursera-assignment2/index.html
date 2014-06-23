@@ -49,22 +49,48 @@
     <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    
+    <pre><code>## Error: object &#39;opts_chunk&#39; not found
+</code></pre>
+
+<p>We developped an app plotting the probability density funcions available in R.</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 1</h2>
+    <h2>Probability Density Functions</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>R pseudo and parameters:</p>
+
+<pre><code>-     binom = size, prob
+-     chisq = df, ncp
+-     f     = df1, df2, ncp
+-     norm  = mean, sd
+-     hyper = m, n, k
+-     pois  = lambda
+-     t     = df, ncp
+-     unif  = min, max
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>URL</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://coursera.shinyapps.io/densities">http://coursera.shinyapps.io/densities</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
   <hgroup>
     <h2>R Base - 1</h2>
   </hgroup>
@@ -99,7 +125,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>Interactive Console</h2>
   </hgroup>
@@ -107,71 +133,187 @@
      
 <div class='row-fluid'>
   <div class='span5'>
-    <form id="knitForm4" data-cell="4">
-      <p><textarea class='interactive' id='interactive4' data-cell='4' data-results='asis' style='display:none'>require(googleVis)
-M1 &lt;- gvisMotionChart(Fruits, idvar = &#39;Fruit&#39;, timevar = &#39;Year&#39;)
-print(M1, tag = &#39;chart&#39;)</textarea></p>
-
-      <div id='aceeditor4' style="height:px;"></div>
-      <div class='interactive btn-toolbar pull-left'>
-        <div class='btn-group'>
-          <a class='btn btn-small action-button' id='runCode4' data-action='runCode'
-            data-cell='4' rel='tooltip' data-title='Run Code'>
-            <i class='icon-play'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='testCode4' data-action='testCode'
-             data-cell='4' rel='tooltip' data-title='Test Code'>
-            <i class='icon-check'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='clearResult4' data-action='clearResult'
-             data-cell='4' rel='tooltip' data-title='Clear Output'>
-            <i class="icon-remove"></i>
-          </a>
-          <a class='btn  btn-small iBtn' id='getHint4' rel='tooltip' 
-            data-title="Get Hint" data-action='getHint'
-            data-cell='4' data-hint="">
-            <i class="icon-bookmark"></i>
-          </a>
-        </div>
-      </div>    </form>
-  </div>
-  <div class='span7'>
-    <div id="knitResult4" class='shiny-html-output'></div>
-  </div>
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Interactive Controls</h2>
-  </hgroup>
-  <article data-timings="">
-     
-<div class='row-fluid'>
-  <div class='span5'>
     <form id="knitForm5" data-cell="5">
-      <div class="row-fluid">
-  <div class="span4">
-    <form class="well">
-      <label class="control-label" for="sex">Choose Sex</label>
-      <select id="sex">
-        <option value="Male" selected="selected">Male</option>
-        <option value="Female">Female</option>
-      </select>
-      <script type="application/json" data-for="sex" data-nonempty="">{}</script>
-      <label class="control-label" for="type">Choose Type</label>
-      <select id="type">
-        <option value="multiBarChart" selected="selected">multiBarChart</option>
-        <option value="multiBarHorizontalChart">multiBarHorizontalChart</option>
-      </select>
-      <script type="application/json" data-for="type" data-nonempty="">{}</script>
-    </form>
-  </div>
-  <div class="span8">
-    <div id="nvd3plot" class="shiny-html-output nvd3 rChart"></div>
-  </div>
+      <p>Test for googleVis:</p>
+
+<pre><code class="r">require(googleVis)
+M1 &lt;- gvisMotionChart(Fruits, idvar = &#39;Fruit&#39;, timevar = &#39;Year&#39;)
+print(M1, tag = &#39;chart&#39;)
+</code></pre>
+
+<!-- MotionChart generated in R 3.1.0 by googleVis 0.5.2 package -->
+
+<!-- Mon Jun 23 16:44:21 2014 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMotionChartID443e233d32f0 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Apples",
+2008,
+"West",
+98,
+78,
+20,
+"2008-12-31" 
+],
+[
+ "Apples",
+2009,
+"West",
+111,
+79,
+32,
+"2009-12-31" 
+],
+[
+ "Apples",
+2010,
+"West",
+89,
+76,
+13,
+"2010-12-31" 
+],
+[
+ "Oranges",
+2008,
+"East",
+96,
+81,
+15,
+"2008-12-31" 
+],
+[
+ "Bananas",
+2008,
+"East",
+85,
+76,
+9,
+"2008-12-31" 
+],
+[
+ "Oranges",
+2009,
+"East",
+93,
+80,
+13,
+"2009-12-31" 
+],
+[
+ "Bananas",
+2009,
+"East",
+94,
+78,
+16,
+"2009-12-31" 
+],
+[
+ "Oranges",
+2010,
+"East",
+98,
+91,
+7,
+"2010-12-31" 
+],
+[
+ "Bananas",
+2010,
+"East",
+81,
+71,
+10,
+"2010-12-31" 
+] 
+];
+data.addColumn('string','Fruit');
+data.addColumn('number','Year');
+data.addColumn('string','Location');
+data.addColumn('number','Sales');
+data.addColumn('number','Expenses');
+data.addColumn('number','Profit');
+data.addColumn('string','Date');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMotionChartID443e233d32f0() {
+var data = gvisDataMotionChartID443e233d32f0();
+var options = {};
+options["width"] =    600;
+options["height"] =    500;
+
+    var chart = new google.visualization.MotionChart(
+    document.getElementById('MotionChartID443e233d32f0')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "motionchart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMotionChartID443e233d32f0);
+})();
+function displayChartMotionChartID443e233d32f0() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID443e233d32f0"></script>
+ 
+
+<!-- divChart -->
+
+<div id="MotionChartID443e233d32f0"
+  style="width: 600px; height: 500px;">
 </div>
 
       <div id='aceeditor5' style="height:px;"></div>
@@ -217,25 +359,25 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 1'>
+        data-slide=2 title='Probability Density Functions'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='R Base - 1'>
+        data-slide=3 title='URL'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Interactive Console'>
+        data-slide=4 title='R Base - 1'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Interactive Controls'>
+        data-slide=5 title='Interactive Console'>
          5
       </a>
     </li>

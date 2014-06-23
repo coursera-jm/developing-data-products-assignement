@@ -1,8 +1,12 @@
 base
 devtools
+ggplot2
 googleVis
 knitr
+MASS
 shiny
+shinyapps
 slidify
 slidifyLibraries
+UsingR
 XML

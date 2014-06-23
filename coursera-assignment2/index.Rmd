@@ -17,11 +17,27 @@ knit        : slidify::knit2slides
 ```{r echo = F, message = F, cache = F}
 opts_chunk$set(results = 'asis', comment = NA, message = F, tidy = F)
 ```
+We developped an app plotting the probability density funcions available in R.
 
 --- .class #id 
 
-## Slide 1
+## Probability Density Functions
 
+R pseudo and parameters:
+
+    -     binom = size, prob
+    -     chisq = df, ncp
+    -     f     = df1, df2, ncp
+    -     norm  = mean, sd
+    -     hyper = m, n, k
+    -     pois  = lambda
+    -     t     = df, ncp
+    -     unif  = min, max
+
+---
+## URL 
+
+http://coursera.shinyapps.io/densities
 
 ---  &radio
 ## R Base - 1
@@ -43,24 +59,11 @@ cpaste("abc","qwe",sep="")
 --- &interactive
 ## Interactive Console
 
+Test for googleVis:
+
 ```{r opts.label = 'interactive', results = 'asis'}
 require(googleVis)
 M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
 print(M1, tag = 'chart')
 ```
 
---- &interactive
-## Interactive Controls
-```{r opts.label = 'shiny'}
-slidifyUI(
-  sidebarPanel(
-    selectInput('sex', 'Choose Sex', c('Male', 'Female')),
-    selectInput('type', 'Choose Type',
-      c('multiBarChart', 'multiBarHorizontalChart')
-    )
-  ),
-  mainPanel(
-    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
-  )
-)
-```
