@@ -14,9 +14,6 @@ knit        : slidify::knit2slides
 
 ## Introduction
 
-```{r echo = F, message = F, cache = F}
-opts_chunk$set(results = 'asis', comment = NA, message = F, tidy = F)
-```
 We developped an app plotting the probability density funcions available in R.
 
 --- .class #id 

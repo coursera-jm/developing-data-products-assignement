@@ -14,10 +14,6 @@ knit        : slidify::knit2slides
 
 ## Introduction
 
-
-```
-## Error: object 'opts_chunk' not found
-```
 We developped an app plotting the probability density funcions available in R.
 
 --- .class #id 
@@ -70,14 +66,14 @@ print(M1, tag = 'chart')
 ```
 
 <!-- MotionChart generated in R 3.1.0 by googleVis 0.5.2 package -->
-<!-- Mon Jun 23 16:44:21 2014 -->
+<!-- Mon Jun 23 16:51:25 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID443e233d32f0 () {
+function gvisDataMotionChartID443e7af11cd3 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -175,14 +171,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID443e233d32f0() {
-var data = gvisDataMotionChartID443e233d32f0();
+function drawChartMotionChartID443e7af11cd3() {
+var data = gvisDataMotionChartID443e7af11cd3();
 var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID443e233d32f0')
+    document.getElementById('MotionChartID443e7af11cd3')
     );
     chart.draw(data,options);
     
@@ -206,9 +202,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID443e233d32f0);
+callbacks.push(drawChartMotionChartID443e7af11cd3);
 })();
-function displayChartMotionChartID443e233d32f0() {
+function displayChartMotionChartID443e7af11cd3() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -232,11 +228,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID443e233d32f0"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID443e7af11cd3"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID443e233d32f0"
+<div id="MotionChartID443e7af11cd3"
   style="width: 600px; height: 500px;">
 </div>
 
