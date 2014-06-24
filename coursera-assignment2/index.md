@@ -18,7 +18,14 @@ knit        : slidify::knit2slides
 ```
 ## Error: object 'opts_chunk' not found
 ```
-We developped an app plotting the probability density funcions available in R.
+We developped an app plotting some of the probability density functions available in R.
+
+The parameters necessary for each distribution adapt to the distribution chosen. \
+
+For example, if you want to draw a normal curve, the app asks for mean and sd. I you wnat to draw a Poisson curve, it asks for lambda.
+
+Densities are drawn by generating observations (x) and calculating the density (d- function in R). 
+Cumulative densities curves work by providing the plot with a the p- function.
 
 --- .class #id 
 
@@ -40,8 +47,10 @@ R pseudo and parameters:
 
 http://coursera.shinyapps.io/densities
 
+The next slide is an exercice to try some of slidify functionalities.
+
 ---  &radio
-## R Base - 1
+## R Base
 
 What is the base R function or operator that concatenate 2 character vectors?
 
@@ -59,8 +68,6 @@ cpaste("abc","qwe",sep="")
 
 --- &interactive
 ## Interactive Console
-
-Test for googleVis:
 
 
 ```r
