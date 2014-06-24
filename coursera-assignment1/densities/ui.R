@@ -5,8 +5,6 @@
 # http://www.rstudio.com/shiny/
 #
 
-
-
 library(shiny)
 
 shinyUI(fluidPage(
@@ -16,7 +14,7 @@ shinyUI(fluidPage(
   fluidRow(
     column(12, wellPanel(
       p("The plot is update each time a parameter changes."),
-      p(" Please wait until the screen refreshes before changing another parameter.")
+      p(" Please wait until the screen refreshes before changing another parameter.")      
     ))
   ),
   fluidRow(
@@ -35,14 +33,15 @@ shinyUI(fluidPage(
           ),
           #              "x2", "x3", "sin"
           selectInput("type", "Type",
-                      choices = c("direct" = "ncum",
+                      choices = c("density" = "ncum",
                                   "cumulative" = "cum"
                                   ),
                       selected = "ncum"
-                      )
+                      ),
+          verbatimTextOutput("params")
     ),
     column(4, 
-      helpText(paste("Please select the corresponding parameters for",verbatimTextOutput("fun2"))),
+      helpText(paste("Please select the corresponding parameters:")),
       # This outputs the dynamic UI component
       uiOutput("ui")
     ),
@@ -56,9 +55,10 @@ shinyUI(fluidPage(
     column(2,
            # Specification of range within an interval
             sliderInput("range", "Range:",
-                min = -50, max = 50, value = c(-10,10))
-    ),
-    verbatimTextOutput("params")
+                min = -20, 
+                max = 20, 
+                value = c(-5,5))
+    )
   ),
   fluidRow(
       column(12,
