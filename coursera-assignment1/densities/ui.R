@@ -5,8 +5,6 @@
 # http://www.rstudio.com/shiny/
 #
 
-
-
 library(shiny)
 
 shinyUI(fluidPage(
@@ -15,13 +13,13 @@ shinyUI(fluidPage(
   
   fluidRow(
     column(12, wellPanel(
-      p("The plot is update each time a parameter changes."),
-      p(" Please wait until the screen refreshes before changing another parameter.")
+      p("The plot is updated each time a parameter changes."),
+      p(" Please wait until the screen refreshes before changing another parameter.")      
     ))
   ),
   fluidRow(
     column(4,
-           helpText("Please select a probability density function:"),
+           helpText("Please select a probability density function. The parameters on the central panel will change according to the function chosen."),
            selectInput("fun", "Function",
                  choices = c("binomial" = "binom",
                              "chi-squared" = "chisq",
@@ -35,30 +33,28 @@ shinyUI(fluidPage(
           ),
           #              "x2", "x3", "sin"
           selectInput("type", "Type",
-                      choices = c("direct" = "ncum",
+                      choices = c("density" = "ncum",
                                   "cumulative" = "cum"
                                   ),
                       selected = "ncum"
                       )
     ),
     column(4, 
-      helpText(paste("Please select the corresponding parameters for",verbatimTextOutput("fun2"))),
+  #    helpText(paste("Please select the corresponding parameters:")),
       # This outputs the dynamic UI component
       uiOutput("ui")
     ),
-    column(2,
+    column(4,
            sliderInput("n", "Number of observations:", 
                        min = 1, 
                        max = 500, 
                        value = 100,
-                       step  = 10)
-    ),
-    column(2,
-           # Specification of range within an interval
-            sliderInput("range", "Range:",
-                min = -50, max = 50, value = c(-10,10))
-    ),
-    verbatimTextOutput("params")
+                       step  = 10),
+           br(),
+           helpText("Selected Parameters:"),
+           verbatimTextOutput("params")
+           
+    )
   ),
   fluidRow(
       column(12,

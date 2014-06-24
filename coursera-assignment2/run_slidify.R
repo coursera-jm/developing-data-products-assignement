@@ -8,8 +8,9 @@ library(slidify)
 
 getwd()
 #setwd("..")
+setwd("coursera-assignment2")
 
-author("assignement2") # published in gh-branch
+#author("assignement2") # published in gh-branch
 slidify("index.Rmd")
 browseURL("index.html")
 publish(username = "coursera-jm", repo = "developing-data-products-assignement")

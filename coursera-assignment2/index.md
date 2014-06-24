@@ -14,7 +14,18 @@ knit        : slidify::knit2slides
 
 ## Introduction
 
-We developped an app plotting the probability density funcions available in R.
+
+```
+## Error: object 'opts_chunk' not found
+```
+We developped an app plotting some of the probability density functions available in R.
+
+The parameters necessary for each distribution adapt to the distribution chosen. \
+
+For example, if you want to draw a normal curve, the app asks for mean and sd. I you wnat to draw a Poisson curve, it asks for lambda.
+
+Densities are drawn by generating observations (x) and calculating the density (d- function in R). 
+Cumulative densities curves work by providing the plot with a the p- function.
 
 --- .class #id 
 
@@ -36,8 +47,10 @@ R pseudo and parameters:
 
 http://coursera.shinyapps.io/densities
 
+The next 2 slides are trying some of slidify new functionalities.
+
 ---  &radio
-## R Base - 1
+## R Base
 
 What is the base R function or operator that concatenate 2 character vectors?
 
@@ -56,8 +69,6 @@ cpaste("abc","qwe",sep="")
 --- &interactive
 ## Interactive Console
 
-Test for googleVis:
-
 
 ```r
 require(googleVis)
@@ -66,14 +77,14 @@ print(M1, tag = 'chart')
 ```
 
 <!-- MotionChart generated in R 3.1.0 by googleVis 0.5.2 package -->
-<!-- Mon Jun 23 16:51:25 2014 -->
+<!-- Mon Jun 23 16:44:21 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID443e7af11cd3 () {
+function gvisDataMotionChartID443e233d32f0 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -171,14 +182,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID443e7af11cd3() {
-var data = gvisDataMotionChartID443e7af11cd3();
+function drawChartMotionChartID443e233d32f0() {
+var data = gvisDataMotionChartID443e233d32f0();
 var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID443e7af11cd3')
+    document.getElementById('MotionChartID443e233d32f0')
     );
     chart.draw(data,options);
     
@@ -202,9 +213,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID443e7af11cd3);
+callbacks.push(drawChartMotionChartID443e233d32f0);
 })();
-function displayChartMotionChartID443e7af11cd3() {
+function displayChartMotionChartID443e233d32f0() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -228,11 +239,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID443e7af11cd3"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID443e233d32f0"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID443e7af11cd3"
+<div id="MotionChartID443e233d32f0"
   style="width: 600px; height: 500px;">
 </div>
 
