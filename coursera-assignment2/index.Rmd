@@ -51,6 +51,23 @@ The next 2 slides are trying some of slidify new functionalities.
 ---  &radio
 ## R Base
 
+Which one is true about the Poisson distribution?
+
+1. Defined as the number of successes in a sequence of n independent yes/no experiments.
+2. Mean and Variance define the distribution, which is symetrical around the mean.
+3. Defined as as the ratio of two scaled chi-squared variates.
+4. The λ parameter is equal to the expected value of X and also to its variance.
+5. Defined as the sum of the squares of k independent standard normal random variables.
+
+*** .hint 
+tooth
+
+*** .explanation 
+cpaste("abc","qwe",sep="")
+
+---  &radio
+## R Base
+
 What is the base R function or operator that concatenate 2 character vectors?
 
 1. +
@@ -64,13 +81,4 @@ tooth
 
 *** .explanation 
 cpaste("abc","qwe",sep="")
-
---- &interactive
-## Interactive Console
-
-```{r opts.label = 'interactive', results = 'asis'}
-require(googleVis)
-M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
-print(M1, tag = 'chart')
-```
 

@@ -52,6 +52,23 @@ The next 2 slides are trying some of slidify new functionalities.
 ---  &radio
 ## R Base
 
+Which one is true about the Poisson distribution?
+
+1. Defined as the number of successes in a sequence of n independent yes/no experiments.
+2. Mean and Variance define the distribution, which is symetrical around the mean.
+3. Defined as as the ratio of two scaled chi-squared variates.
+4. The λ parameter is equal to the expected value of X and also to its variance.
+5. Defined as the sum of the squares of k independent standard normal random variables.
+
+*** .hint 
+tooth
+
+*** .explanation 
+cpaste("abc","qwe",sep="")
+
+---  &radio
+## R Base
+
 What is the base R function or operator that concatenate 2 character vectors?
 
 1. +
@@ -65,185 +82,4 @@ tooth
 
 *** .explanation 
 cpaste("abc","qwe",sep="")
-
---- &interactive
-## Interactive Console
-
-
-```r
-require(googleVis)
-M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
-print(M1, tag = 'chart')
-```
-
-<!-- MotionChart generated in R 3.1.0 by googleVis 0.5.2 package -->
-<!-- Mon Jun 23 16:44:21 2014 -->
-
-
-<!-- jsHeader -->
-<script type="text/javascript">
- 
-// jsData 
-function gvisDataMotionChartID443e233d32f0 () {
-var data = new google.visualization.DataTable();
-var datajson =
-[
- [
- "Apples",
-2008,
-"West",
-98,
-78,
-20,
-"2008-12-31" 
-],
-[
- "Apples",
-2009,
-"West",
-111,
-79,
-32,
-"2009-12-31" 
-],
-[
- "Apples",
-2010,
-"West",
-89,
-76,
-13,
-"2010-12-31" 
-],
-[
- "Oranges",
-2008,
-"East",
-96,
-81,
-15,
-"2008-12-31" 
-],
-[
- "Bananas",
-2008,
-"East",
-85,
-76,
-9,
-"2008-12-31" 
-],
-[
- "Oranges",
-2009,
-"East",
-93,
-80,
-13,
-"2009-12-31" 
-],
-[
- "Bananas",
-2009,
-"East",
-94,
-78,
-16,
-"2009-12-31" 
-],
-[
- "Oranges",
-2010,
-"East",
-98,
-91,
-7,
-"2010-12-31" 
-],
-[
- "Bananas",
-2010,
-"East",
-81,
-71,
-10,
-"2010-12-31" 
-] 
-];
-data.addColumn('string','Fruit');
-data.addColumn('number','Year');
-data.addColumn('string','Location');
-data.addColumn('number','Sales');
-data.addColumn('number','Expenses');
-data.addColumn('number','Profit');
-data.addColumn('string','Date');
-data.addRows(datajson);
-return(data);
-}
- 
-// jsDrawChart
-function drawChartMotionChartID443e233d32f0() {
-var data = gvisDataMotionChartID443e233d32f0();
-var options = {};
-options["width"] =    600;
-options["height"] =    500;
-
-    var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID443e233d32f0')
-    );
-    chart.draw(data,options);
-    
-
-}
-  
- 
-// jsDisplayChart
-(function() {
-var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = "motionchart";
-  
-// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-var i, newPackage = true;
-for (i = 0; newPackage && i < pkgs.length; i++) {
-if (pkgs[i] === chartid)
-newPackage = false;
-}
-if (newPackage)
-  pkgs.push(chartid);
-  
-// Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID443e233d32f0);
-})();
-function displayChartMotionChartID443e233d32f0() {
-  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-  window.clearTimeout(window.__gvisLoad);
-  // The timeout is set to 100 because otherwise the container div we are
-  // targeting might not be part of the document yet
-  window.__gvisLoad = setTimeout(function() {
-  var pkgCount = pkgs.length;
-  google.load("visualization", "1", { packages:pkgs, callback: function() {
-  if (pkgCount != pkgs.length) {
-  // Race condition where another setTimeout call snuck in after us; if
-  // that call added a package, we must not shift its callback
-  return;
-}
-while (callbacks.length > 0)
-callbacks.shift()();
-} });
-}, 100);
-}
- 
-// jsFooter
-</script>
- 
-<!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID443e233d32f0"></script>
- 
-<!-- divChart -->
-  
-<div id="MotionChartID443e233d32f0"
-  style="width: 600px; height: 500px;">
-</div>
 
