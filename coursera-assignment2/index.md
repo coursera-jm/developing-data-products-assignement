@@ -14,10 +14,6 @@ knit        : slidify::knit2slides
 
 ## Introduction
 
-
-```
-## Error: object 'opts_chunk' not found
-```
 We developped an app plotting some of the probability density functions available in R.
 
 The parameters necessary for each distribution adapt to the distribution chosen. \

@@ -7,7 +7,7 @@ library(slidify)
 #install_github('shiny', 'rstudio')
 
 getwd()
-#setwd("..")
+setwd("..")
 setwd("coursera-assignment2")
 
 #author("assignement2") # published in gh-branch
