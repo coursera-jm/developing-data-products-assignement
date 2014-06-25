@@ -49,7 +49,17 @@
     <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <p>We developped an app plotting the probability density funcions available in R.</p>
+    <pre><code>## Error: object &#39;opts_chunk&#39; not found
+</code></pre>
+
+<p>We developped an app plotting some of the probability density functions available in R.</p>
+
+<p>The parameters necessary for each distribution adapt to the distribution chosen. \</p>
+
+<p>For example, if you want to draw a normal curve, the app asks for mean and sd. I you wnat to draw a Poisson curve, it asks for lambda.</p>
+
+<p>Densities are drawn by generating observations (x) and calculating the density (d- function in R). 
+Cumulative densities curves work by providing the plot with a the p- function.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -83,13 +93,50 @@
   <article data-timings="">
     <p><a href="http://coursera.shinyapps.io/densities">http://coursera.shinyapps.io/densities</a></p>
 
+<p>The next 2 slides are trying some of slidify new functionalities.</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>R Base - 1</h2>
+    <h2>R Base</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>Which one is true about the Poisson distribution?</p>
+
+<ol>
+<li>Defined as the number of successes in a sequence of n independent yes/no experiments.</li>
+<li>Mean and Variance define the distribution, which is symetrical around the mean.</li>
+<li>Defined as as the ratio of two scaled chi-squared variates.</li>
+<li>The λ parameter is equal to the expected value of X and also to its variance.</li>
+<li>Defined as the sum of the squares of k independent standard normal random variables.</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>tooth</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>cpaste(&quot;abc&quot;,&quot;qwe&quot;,sep=&quot;&quot;)</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>R Base</h2>
   </hgroup>
   <article data-timings="">
     
@@ -122,228 +169,6 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Interactive Console</h2>
-  </hgroup>
-  <article data-timings="">
-     
-<div class='row-fluid'>
-  <div class='span5'>
-    <form id="knitForm5" data-cell="5">
-      <p>Test for googleVis:</p>
-
-<pre><code class="r">require(googleVis)
-M1 &lt;- gvisMotionChart(Fruits, idvar = &#39;Fruit&#39;, timevar = &#39;Year&#39;)
-print(M1, tag = &#39;chart&#39;)
-</code></pre>
-
-<!-- MotionChart generated in R 3.1.0 by googleVis 0.5.2 package -->
-
-<!-- Mon Jun 23 16:51:25 2014 -->
-
-<!-- jsHeader -->
-
-<script type="text/javascript">
- 
-// jsData 
-function gvisDataMotionChartID443e7af11cd3 () {
-var data = new google.visualization.DataTable();
-var datajson =
-[
- [
- "Apples",
-2008,
-"West",
-98,
-78,
-20,
-"2008-12-31" 
-],
-[
- "Apples",
-2009,
-"West",
-111,
-79,
-32,
-"2009-12-31" 
-],
-[
- "Apples",
-2010,
-"West",
-89,
-76,
-13,
-"2010-12-31" 
-],
-[
- "Oranges",
-2008,
-"East",
-96,
-81,
-15,
-"2008-12-31" 
-],
-[
- "Bananas",
-2008,
-"East",
-85,
-76,
-9,
-"2008-12-31" 
-],
-[
- "Oranges",
-2009,
-"East",
-93,
-80,
-13,
-"2009-12-31" 
-],
-[
- "Bananas",
-2009,
-"East",
-94,
-78,
-16,
-"2009-12-31" 
-],
-[
- "Oranges",
-2010,
-"East",
-98,
-91,
-7,
-"2010-12-31" 
-],
-[
- "Bananas",
-2010,
-"East",
-81,
-71,
-10,
-"2010-12-31" 
-] 
-];
-data.addColumn('string','Fruit');
-data.addColumn('number','Year');
-data.addColumn('string','Location');
-data.addColumn('number','Sales');
-data.addColumn('number','Expenses');
-data.addColumn('number','Profit');
-data.addColumn('string','Date');
-data.addRows(datajson);
-return(data);
-}
- 
-// jsDrawChart
-function drawChartMotionChartID443e7af11cd3() {
-var data = gvisDataMotionChartID443e7af11cd3();
-var options = {};
-options["width"] =    600;
-options["height"] =    500;
-
-    var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID443e7af11cd3')
-    );
-    chart.draw(data,options);
-    
-
-}
-  
- 
-// jsDisplayChart
-(function() {
-var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = "motionchart";
-  
-// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-var i, newPackage = true;
-for (i = 0; newPackage && i < pkgs.length; i++) {
-if (pkgs[i] === chartid)
-newPackage = false;
-}
-if (newPackage)
-  pkgs.push(chartid);
-  
-// Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID443e7af11cd3);
-})();
-function displayChartMotionChartID443e7af11cd3() {
-  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-  window.clearTimeout(window.__gvisLoad);
-  // The timeout is set to 100 because otherwise the container div we are
-  // targeting might not be part of the document yet
-  window.__gvisLoad = setTimeout(function() {
-  var pkgCount = pkgs.length;
-  google.load("visualization", "1", { packages:pkgs, callback: function() {
-  if (pkgCount != pkgs.length) {
-  // Race condition where another setTimeout call snuck in after us; if
-  // that call added a package, we must not shift its callback
-  return;
-}
-while (callbacks.length > 0)
-callbacks.shift()();
-} });
-}, 100);
-}
- 
-// jsFooter
-</script>
- 
-
-<!-- jsChart -->  
-
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID443e7af11cd3"></script>
- 
-
-<!-- divChart -->
-
-<div id="MotionChartID443e7af11cd3"
-  style="width: 600px; height: 500px;">
-</div>
-
-      <div id='aceeditor5' style="height:px;"></div>
-      <div class='interactive btn-toolbar pull-left'>
-        <div class='btn-group'>
-          <a class='btn btn-small action-button' id='runCode5' data-action='runCode'
-            data-cell='5' rel='tooltip' data-title='Run Code'>
-            <i class='icon-play'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='testCode5' data-action='testCode'
-             data-cell='5' rel='tooltip' data-title='Test Code'>
-            <i class='icon-check'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='clearResult5' data-action='clearResult'
-             data-cell='5' rel='tooltip' data-title='Clear Output'>
-            <i class="icon-remove"></i>
-          </a>
-          <a class='btn  btn-small iBtn' id='getHint5' rel='tooltip' 
-            data-title="Get Hint" data-action='getHint'
-            data-cell='5' data-hint="">
-            <i class="icon-bookmark"></i>
-          </a>
-        </div>
-      </div>    </form>
-  </div>
-  <div class='span7'>
-    <div id="knitResult5" class='shiny-html-output'></div>
-  </div>
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
@@ -368,13 +193,13 @@ callbacks.shift()();
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='R Base - 1'>
+        data-slide=4 title='R Base'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Interactive Console'>
+        data-slide=5 title='R Base'>
          5
       </a>
     </li>
