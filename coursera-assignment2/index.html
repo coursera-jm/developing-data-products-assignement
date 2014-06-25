@@ -51,12 +51,12 @@
   <article data-timings="">
     <p>We developped an app plotting some of the probability density functions available in R.</p>
 
-<p>The parameters necessary for each distribution adapt to the distribution chosen. \</p>
+<p>The parameters necessary for each distribution adapt to the distribution chosen.</p>
 
-<p>For example, if you want to draw a normal curve, the app asks for mean and sd. I you wnat to draw a Poisson curve, it asks for lambda.</p>
+<p>For example, if you want to draw a normal curve, the app asks for mean and sd. If you want to draw a Poisson curve, it asks for lambda.</p>
 
 <p>Densities are drawn by generating observations (x) and calculating the density (d- function in R). 
-Cumulative densities curves work by providing the plot with a the p- function.</p>
+Cumulative densities curves work by providing the plot function with the p- function (e.g. R pnorm).</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -67,7 +67,7 @@ Cumulative densities curves work by providing the plot with a the p- function.</
     <h2>Probability Density Functions</h2>
   </hgroup>
   <article data-timings="">
-    <p>R pseudo and parameters:</p>
+    <p>R function and corresponding parameters:</p>
 
 <pre><code>-     binom = size, prob
 -     chisq = df, ncp
@@ -85,10 +85,10 @@ Cumulative densities curves work by providing the plot with a the p- function.</
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>URL</h2>
+    <h2><a href="http://coursera.shinyapps.io/densities">http://coursera.shinyapps.io/densities</a></h2>
   </hgroup>
   <article data-timings="">
-    <p><a href="http://coursera.shinyapps.io/densities">http://coursera.shinyapps.io/densities</a></p>
+    <p><img src="./assets/img/screen.png" height=80% width=80%></p>
 
 <p>The next 2 slides are trying some of slidify new functionalities.</p>
 
@@ -119,11 +119,14 @@ Cumulative densities curves work by providing the plot with a the p- function.</
   <button class="quiz-clear btn btn-danger">Clear</button>
   
   <div class="quiz-hint">
-  <p>tooth</p>
+  <p>(k; lambda) = Pr(X=k) = lambda<sup>k</sup> e<sup>-lambda</sup> / k!</p>
 
 </div>
 <div class="quiz-explanation">
-  <p>cpaste(&quot;abc&quot;,&quot;qwe&quot;,sep=&quot;&quot;)</p>
+  <pre><code class="r">x = seq(0,10); plot (x,dpois(x,lambda=3))
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
 
 </div>
 </div>
@@ -158,7 +161,11 @@ Cumulative densities curves work by providing the plot with a the p- function.</
 
 </div>
 <div class="quiz-explanation">
-  <p>cpaste(&quot;abc&quot;,&quot;qwe&quot;,sep=&quot;&quot;)</p>
+  <pre><code class="r">cpaste(&quot;abc&quot;,&quot;qwe&quot;,sep=&quot;&quot;)
+</code></pre>
+
+<pre><code>## Error: could not find function &quot;cpaste&quot;
+</code></pre>
 
 </div>
 </div>
@@ -184,7 +191,7 @@ Cumulative densities curves work by providing the plot with a the p- function.</
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='URL'>
+        data-slide=3 title='<a href="http://coursera.shinyapps.io/densities">http://coursera.shinyapps.io/densities</a>'>
          3
       </a>
     </li>

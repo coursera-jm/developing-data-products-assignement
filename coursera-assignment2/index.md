@@ -16,18 +16,18 @@ knit        : slidify::knit2slides
 
 We developped an app plotting some of the probability density functions available in R.
 
-The parameters necessary for each distribution adapt to the distribution chosen. \
+The parameters necessary for each distribution adapt to the distribution chosen.
 
-For example, if you want to draw a normal curve, the app asks for mean and sd. I you wnat to draw a Poisson curve, it asks for lambda.
+For example, if you want to draw a normal curve, the app asks for mean and sd. If you want to draw a Poisson curve, it asks for lambda.
 
 Densities are drawn by generating observations (x) and calculating the density (d- function in R). 
-Cumulative densities curves work by providing the plot with a the p- function.
+Cumulative densities curves work by providing the plot function with the p- function (e.g. R pnorm).
 
 --- .class #id 
 
 ## Probability Density Functions
 
-R pseudo and parameters:
+R function and corresponding parameters:
 
     -     binom = size, prob
     -     chisq = df, ncp
@@ -39,9 +39,9 @@ R pseudo and parameters:
     -     unif  = min, max
 
 ---
-## URL 
+## http://coursera.shinyapps.io/densities
 
-http://coursera.shinyapps.io/densities
+<img src="./assets/img/screen.png" height=80% width=80%>
 
 The next 2 slides are trying some of slidify new functionalities.
 
@@ -57,10 +57,15 @@ Which one is true about the Poisson distribution?
 5. Defined as the sum of the squares of k independent standard normal random variables.
 
 *** .hint 
-tooth
+(k; lambda) = Pr(X=k) = lambda^k e^-lambda / k!
 
 *** .explanation 
-cpaste("abc","qwe",sep="")
+
+```r
+x = seq(0,10); plot (x,dpois(x,lambda=3))
+```
+
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
 ---  &radio
 ## R Base
@@ -77,5 +82,12 @@ What is the base R function or operator that concatenate 2 character vectors?
 tooth
 
 *** .explanation 
+
+```r
 cpaste("abc","qwe",sep="")
+```
+
+```
+## Error: could not find function "cpaste"
+```
 
